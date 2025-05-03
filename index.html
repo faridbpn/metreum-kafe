@@ -71,8 +71,6 @@
             </a>
         </div>
     </section>
-
-
     
  <!-- About Section -->
    <section id="about" class="py-20 bg-white relative overflow-hidden">
@@ -262,7 +260,63 @@
     </div>
   </section>
     
-<!-- Bento layout -->
+    <!-- Bento Layout Section -->
+    <section id="bento" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="bento-grid grid grid-cols-1 md:grid-cols-4 lg:grid-cols-12 gap-6">
+                <!-- Hero Image Recap -->
+                <div class="col-span-1 md:col-span-4 lg:col-span-6 rounded-xl overflow-hidden shadow-lg bento-card relative" data-aos="fade-right" data-aos-duration="1000">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80" alt="Metreum Kafe Interior" class="w-full h-full object-cover">
+                    <div class="absolute top-4 right-4 bg-green-800 text-white px-3 py-1 rounded-full text-sm font-semibold" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="800">Kafe Terbaik 2023</div>
+                </div>
+
+                <!-- About Info -->
+                <div class="col-span-1 md:col-span-2 lg:col-span-3 bg-white rounded-xl p-6 shadow-lg bento-card" data-aos="fade-up" data-aos-duration="1000">
+                    <h3 class="text-2xl font-bold text-green-800 mb-4">Tentang Kami</h3>
+                    <p class="text-gray-700 mb-4">Berdiri sejak 2015, Metreum Kafe menggabungkan cita rasa kopi Jawa dengan budaya lokal Yogyakarta dalam harmoni tradisi dan modernitas.</p>
+                    <a href="#about" class="text-green-800 font-semibold hover:underline">Pelajari Lebih Lanjut</a>
+                </div>
+
+                <!-- Featured Menu: Kopi -->
+                <div class="col-span-1 md:col-span-2 lg:col-span-3 bg-white rounded-xl p-6 shadow-lg bento-card" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+                    <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80" alt="Kopi Jawa Tubruk" class="w-full h-32 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold text-green-800 mb-2">Kopi Jawa Tubruk</h3>
+                    <p class="text-gray-700 mb-2">Kopi khas Jawa dengan gula aren, disajikan secara tradisional.</p>
+                    <span class="text-green-800 font-bold">Rp 25.000</span>
+                </div>
+
+                <!-- Featured Menu: Gudeg -->
+                <div class="col-span-1 md:col-span-2 lg:col-span-4 bg-white rounded-xl p-6 shadow-lg bento-card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                    <img src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Gudeg Metreum" class="w-full h-32 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold text-green-800 mb-2">Gudeg Metreum</h3>
+                    <p class="text-gray-700 mb-2">Gudeg spesial dengan nangka muda dan rempah khas, dimasak 12 jam.</p>
+                    <span class="text-green-800 font-bold">Rp 45.000</span>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="col-span-1 md:col-span-2 lg:col-span-4 bg-green-800 text-white rounded-xl p-6 shadow-lg bento-card flex flex-col justify-between" data-aos="zoom-in" data-aos-duration="1000">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">Kunjungi Kami</h3>
+                        <p class="mb-4">Nikmati pengalaman kuliner Jawa autentik di jantung Yogyakarta.</p>
+                    </div>
+                    <a href="#contact" class="inline-block bg-white text-green-800 px-6 py-3 rounded-full font-semibold hover:bg-green-100 transition duration-300">Pesan Sekarang</a>
+                </div>
+
+                <!-- Cultural Highlight -->
+                <div class="col-span-1 md:col-span-4 lg:col-span-4 bg-white rounded-xl p-6 shadow-lg bento-card" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="flex items-start">
+                        <div class="bg-green-100 p-2 rounded-full mr-4 mt-1">
+                            <i class="fas fa-hands-helping text-green-800"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-green-800 mb-2">Komunitas & Budaya</h3>
+                            <p class="text-gray-700">Kami mendukung seniman lokal dengan acara budaya dan pameran seni rutin.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     
     <!-- Testimonial Section -->
@@ -521,16 +575,6 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
           AOS.init();
-
-
-
-
-
-
-
-
-
-
         // Mobile menu toggle
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
