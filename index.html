@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metreum Kafe - Jogja's Hidden Gem</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/logo.png"/>
+</head>
+<body class="relative">
+    <!-- Floating leaves animation -->
+    <div id="leaves-container"></div>
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white bg-opacity-90 shadow-sm transition-all duration-300">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <img src="images/logo.png" alt="" height="35px" width="35px">
+                    <a href="#" class="text-2xl font-bold text-green-800 ml-2">Metreum Kafe</a>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-green-800 hover:text-green-600">Beranda</a>
+                    <a href="#about" class="nav-link text-green-800 hover:text-green-600">Tentang Kami</a>
+                    <a href="#menu" class="nav-link text-green-800 hover:text-green-600">Menu</a>
+                    <a href="#bento" class="nav-link text-green-800 hover:text-green-600">Galeri</a>
+                    <a href="#contact" class="nav-link text-green-800 hover:text-green-600">Reservasi</a>
+                </div>
+                
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-green-800 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="#home" class="block py-2 text-green-800 hover:text-green-600">Beranda</a>
+                <a href="#about" class="block py-2 text-green-800 hover:text-green-600">Tentang Kami</a>
+                <a href="#menu" class="block py-2 text-green-800 hover:text-green-600">Menu</a>
+                <a href="#gallery" class="block py-2 text-green-800 hover:text-green-600">Galeri</a>
+                <a href="#contact" class="block py-2 text-green-800 hover:text-green-600">Reservasi</a>
+            </div>
+        </div>
+    </nav>
+    
+   <!-- Hero Section -->
+    <section id="home" class="hero flex items-center justify-center relative overflow-hidden">
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                Metreum Kafe
+            </h1>
+            <p class="text-xl md:text-2xl text-white mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+                Rasakan Harmoni Rasa & Budaya Jogja dalam Setiap Tegukan
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="800">
+                <a href="#menu" class="bg-white text-green-800 hover:bg-green-100 px-8 py-3 rounded-full font-semibold transition duration-300 transform hover:scale-105">Lihat Menu</a>
+                <a href="#contact" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-green-800 px-8 py-3 rounded-full font-semibold transition duration-300 transform hover:scale-105">Reservasi Sekarang</a>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce" data-aos="fade-up" data-aos-delay="800">
+            <a href="#about" class="text-white text-4xl">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+
+    
+ <!-- About Section -->
+   <section id="about" class="py-20 bg-white relative overflow-hidden">
+    <div class="container mx-auto px-6 max-w-full">
+        <div class="flex flex-col lg:flex-row items-center">
+            <div class="lg:w-1/2 mb-12 lg:mb-0 relative" data-aos="fade-left" data-aos-duration="1000">
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Interior Metreum Kafe" class="rounded-lg shadow-xl w-full h-auto max-w-lg mx-auto">
+                    <div class="absolute -bottom-6 -right-6 bg-green-100 p-4 rounded-lg shadow-lg hidden md:block" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="800">
+                        <div class="flex items-center">
+                            <div class="bg-green-800 text-white p-3 rounded-full mr-3">
+                                <i class="fas fa-award text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-green-800">Kafe Terbaik</p>
+                                <p class="text-sm text-gray-600">Jogja 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="lg:w-1/2 lg:pl-12" data-aos="fade-left" data-aos-duration="1000">
+                <h2 class="text-3xl md:text-4xl font-bold text-green-800 mb-6" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">Cerita Kami</h2>
+                <p class="text-gray-700 mb-6" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">Berdiri sejak 2015 di jantung Yogyakarta, Metreum Kafe lahir dari kecintaan kami terhadap kopi dan budaya Jawa yang kaya. Nama "Metreum" terinspirasi dari kata "metrum" yang berarti irama, menggambarkan harmoni antara tradisi dan modernitas yang kami usung.</p>
+                
+                <div class="mb-8">
+                    <div class="flex items-start mb-4" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
+                        <div class="bg-green-100 p-2 rounded-full mr-4 mt-1">
+                            <i class="fas fa-leaf text-green-800"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-green-800 mb-1">Bahan Lokal Berkualitas</h3>
+                            <p class="text-gray-700">Kami menggunakan biji kopi pilihan dari petani lokal Jawa dan bahan-bahan segar dari pasar tradisional Jogja.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start mb-4" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
+                        <div class="bg-green-100 p-2 rounded-full mr-4 mt-1">
+                            <i class="fas fa-hands-helping text-green-800"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-green-800 mb-1">Komunitas & Budaya</h3>
+                            <p class="text-gray-700">Metreum menjadi wadah bagi seniman lokal untuk menampilkan karya dan mengadakan acara budaya secara rutin.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start" data-aos="fade-up" data-aos-delay="500" data-aos-duration="800">
+                        <div class="bg-green-100 p-2 rounded-full mr-4 mt-1">
+                            <i class="fas fa-heart text-green-800"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-green-800 mb-1">Filosofi Kami</h3>
+                            <p class="text-gray-700">Setiap sajian adalah perpaduan sempurna antara cita rasa modern dan kearifan lokal Jawa yang autentik.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="#gallery" class="inline-block bg-green-800 hover:bg-green-700 text-white px-6 py-3 rounded-full font-semibold transition duration-300" data-aos="fade-up" data-aos-delay="600" data-aos-duration="800">Lihat Galeri Kami</a>
+            </div>
+        </div>
+    </div>
+   </section>
+
+   <!-- menu section -->
+   <section id="menu" class="py-20 bg-green-50 relative overflow-hidden">
+    <div class="container mx-auto px-6 max-w-full">
+      <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="1000">
+        <h2 class="text-3xl md:text-4xl font-bold text-green-800 mb-4">Menu Pilihan</h2>
+        <p class="text-gray-700 max-w-2xl mx-auto">
+          Temukan harmoni rasa dalam setiap sajian kami yang terinspirasi dari kekayaan kuliner Jawa dan teknik modern.
+        </p>
+      </div>
+  
+      <div class="flex justify-center mb-12" data-aos="zoom-in" data-aos-duration="1000">
+        <div class="inline-flex rounded-md shadow-sm">
+          <button type="button" class="menu-tab active px-6 py-3 rounded-l-lg bg-green-800 text-white font-medium" data-category="all">Semua</button>
+          <button type="button" class="menu-tab px-6 py-3 bg-white text-green-800 font-medium" data-category="coffee">Kopi</button>
+          <button type="button" class="menu-tab px-6 py-3 bg-white text-green-800 font-medium" data-category="food">Makanan</button>
+          <button type="button" class="menu-tab px-6 py-3 rounded-r-lg bg-white text-green-800 font-medium" data-category="dessert">Dessert</button>
+        </div>
+      </div>
+  
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="menu-item coffee" data-category="coffee" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
+          <div class="bg-white rounded-xl shadow-md overflow-hidden transition duration-500 menu-card h-full">
+            <div class="relative h-48 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Espresso" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+              <div class="absolute top-4 right-4 bg-green-800 text-white px-3 py-1 rounded-full text-sm font-semibold">Terlaris</div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-bold text-green-800">Kopi Jawa Tubruk</h3>
+                <span class="text-lg font-bold text-green-800">Rp 25.000</span>
+              </div>
+              <p class="text-gray-600 mb-4">Kopi khas Jawa dengan gula aren asli, disajikan dengan teknik tubruk tradisional.</p>
+              <button class="w-full bg-green-100 hover:bg-green-200 text-green-800 py-2 rounded-lg font-medium transition duration-300">+ Tambahkan</button>
+            </div>
+          </div>
+        </div>
+  
+        <div class="menu-item coffee" data-category="coffee" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+          <div class="bg-white rounded-xl shadow-md overflow-hidden transition duration-500 menu-card h-full">
+            <div class="relative h-48 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Espresso" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-bold text-green-800">Espresso Merapi</h3>
+                <span class="text-lg font-bold text-green-800">Rp 30.000</span>
+              </div>
+              <p class="text-gray-600 mb-4">Espresso intens dengan biji kopi dari lereng Gunung Merapi, memberikan rasa bold dengan aftertaste coklat.</p>
+              <button class="w-full bg-green-100 hover:bg-green-200 text-green-800 py-2 rounded-lg font-medium transition duration-300">+ Tambahkan</button>
+            </div>
+          </div>
+        </div>
+  
+        <div class="menu-item food" data-category="food" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
+          <div class="bg-white rounded-xl shadow-md overflow-hidden transition duration-500 menu-card h-full">
+            <div class="relative h-48 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Nasi Gudeg" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-bold text-green-800">Gudeg Metreum</h3>
+                <span class="text-lg font-bold text-green-800">Rp 45.000</span>
+              </div>
+              <p class="text-gray-600 mb-4">Gudeg spesial dengan nangka muda pilihan, dimasak dengan rempah-rempah khas selama 12 jam.</p>
+              <button class="w-full bg-green-100 hover:bg-green-200 text-green-800 py-2 rounded-lg font-medium transition duration-300">+ Tambahkan</button>
+            </div>
+          </div>
+        </div>
+  
+        <div class="menu-item food" data-category="food" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
+          <div class="bg-white rounded-xl shadow-md overflow-hidden transition duration-500 menu-card h-full">
+            <div class="relative h-48 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1092&q=80" alt="Sate Klathak" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+              <div class="absolute top-4 right-4 bg-green-800 text-white px-3 py-1 rounded-full text-sm font-semibold">Baru</div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-bold text-green-800">Sate Klathak Modern</h3>
+                <span class="text-lg font-bold text-green-800">Rp 55.000</span>
+              </div>
+              <p class="text-gray-600 mb-4">Sate klathak dengan daging sapi premium, disajikan dengan sambal kacang spesial dan lontong.</p>
+              <button class="w-full bg-green-100 hover:bg-green-200 text-green-800 py-2 rounded-lg font-medium transition duration-300">+ Tambahkan</button>
+            </div>
+          </div>
+        </div>
+  
+        <div class="menu-item dessert" data-category="dessert" data-aos="fade-up" data-aos-delay="500" data-aos-duration="800">
+          <div class="bg-white rounded-xl shadow-md overflow-hidden transition duration-500 menu-card h-full">
+            <div class="relative h-48 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1562440499-64c9a111f713?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Klepon Cake" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-bold text-green-800">Klepon Cake</h3>
+                <span class="text-lg font-bold text-green-800">Rp 35.000</span>
+              </div>
+              <p class="text-gray-600 mb-4">Kue modern dengan rasa klepon tradisional, lapisan sponge pandan dengan isian gula merah cair.</p>
+              <button class="w-full bg-green-100 hover:bg-green-200 text-green-800 py-2 rounded-lg font-medium transition duration-300">+ Tambahkan</button>
+            </div>
+          </div>
+        </div>
+  
+        <div class="menu-item dessert" data-category="dessert" data-aos="fade-up" data-aos-delay="600" data-aos-duration="800">
+          <div class="bg-white rounded-xl shadow-md overflow-hidden transition duration-500 menu-card h-full">
+            <div class="relative h-48 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1603532648955-039310d9ed75?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Es Dawet" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-bold text-green-800">Es Dawet Signature</h3>
+                <span class="text-lg font-bold text-green-800">Rp 28.000</span>
+              </div>
+              <p class="text-gray-600 mb-4">Dawet hijau dengan santan kental dan gula merah khas, disajikan dengan es serut dan potongan nangka.</p>
+              <button class="w-full bg-green-100 hover:bg-green-200 text-green-800 py-2 rounded-lg font-medium transition duration-300">+ Tambahkan</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="text-center mt-12" data-aos="fade-up" data-aos-duration="1000">
+        <a href="#" class="inline-block bg-green-800 hover:bg-green-700 text-white px-8 py-3 rounded-full font-semibold transition duration-300">Lihat Menu Lengkap</a>
+      </div>
+    </div>
+  </section>
+    
+<!-- Bento layout -->
+
+    
+    <!-- Testimonial Section -->
+    <section class="py-20 bg-green-800 text-white relative overflow-hidden">
+        <div class="container mx-auto px-6 max-w-full">
+            <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="1000">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Apa Kata Mereka?</h2>
+                <p class="max-w-2xl mx-auto">Pengalaman nyata dari pelanggan kami tentang Metreum Kafe.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white bg-opacity-10 rounded-xl p-8 backdrop-filter backdrop-blur-sm" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="800">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Customer" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Dian Sastro</h4>
+                            <div class="flex text-yellow-300">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"Suasana di Metreum sangat nyaman dengan sentuhan budaya Jawa yang modern. Kopi Jawa Tubruk mereka adalah yang terbaik di Jogja!"</p>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 rounded-xl p-8 backdrop-filter backdrop-blur-sm" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="800">
+                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Customer" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Rangga Putra</h4>
+                            <div class="flex text-yellow-300">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"Saya sering bekerja di sini karena WiFi-nya cepat dan suasana tenang. Gudeg Metreum dengan kopi Es Dawet adalah kombinasi sempurna!"</p>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 rounded-xl p-8 backdrop-filter backdrop-blur-sm" data-aos="fade-up" data-aos-delay="500" data-aos-duration="800">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="800">
+                            <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="Customer" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Maya Septi</h4>
+                            <div class="flex text-yellow-300">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"Acara musik malam minggu di Metreum selalu seru! Mereka memberikan panggung untuk musisi lokal dengan kualitas sound yang bagus."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact & Reservation Section -->
+    <section id="contact" class="py-20 bg-white relative overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-green-800 mb-6">Reservasi Tempat</h2>
+                    <p class="text-gray-700 mb-8">Nikmati pengalaman bersantai di Metreum Kafe dengan memesan tempat terlebih dahulu. Kami akan menyiapkan meja terbaik untuk Anda.</p>
+                    
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 mb-2">Nama Lengkap</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-gray-700 mb-2">Nomor Telepon</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent">
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="date" class="block text-gray-700 mb-2">Tanggal</label>
+                                <input type="date" id="date" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent">
+                            </div>
+                            <div>
+                                <label for="time" class="block text-gray-700 mb-2">Waktu</label>
+                                <input type="time" id="time" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="guests" class="block text-gray-700 mb-2">Jumlah Orang</label>
+                            <select id="guests" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent">
+                                <option value="1">1 Orang</option>
+                                <option value="2">2 Orang</option>
+                                <option value="3">3 Orang</option>
+                                <option value="4">4 Orang</option>
+                                <option value="5">5+ Orang</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="notes" class="block text-gray-700 mb-2">Catatan Tambahan</label>
+                            <textarea id="notes" rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-800 focus:border-transparent"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-green-800 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition duration-300">Pesan Sekarang</button>
+                    </form>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-green-800 mb-6">Kunjungi Kami</h2>
+                    
+                    <div class="mb-8">
+                        <div class="flex items-start mb-4">
+                            <div class="bg-green-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-green-800"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-green-800 mb-1">Lokasi</h3>
+                                <p class="text-gray-700">Jl. Prawirotaman No. 37, Yogyakarta 55153</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-4">
+                            <div class="bg-green-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-clock text-green-800"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-green-800 mb-1">Jam Operasional</h3>
+                                <p class="text-gray-700">Senin - Minggu: 08.00 - 22.00 WIB</p>
+                                <p class="text-gray-700">(Weekend buka sampai 23.00 WIB)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-green-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone-alt text-green-800"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-green-800 mb-1">Kontak</h3>
+                                <p class="text-gray-700">+62 812-3456-7890</p>
+                                <p class="text-gray-700">info@metreumkafe.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="rounded-xl overflow-hidden shadow-lg h-96">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.098269037302!2d110.3642773152586!3d-7.797640794399963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5787bd5b6bc5%3A0x21723fd4d3684f71!2sPrawirotaman%2C%20Yogyakarta%20City%2C%20Special%20Region%20of%20Yogyakarta!5e0!3m2!1sen!2sid!4v1689323456789!5m2!1sen!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-green-900 text-white pt-16 pb-8 relative">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Metreum Kafe</h3>
+                    <p class="mb-4">Harmoni rasa dan budaya dalam setiap sajian kami.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-green-800 hover:bg-green-700 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="bg-green-800 hover:bg-green-700 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="bg-green-800 hover:bg-green-700 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="bg-green-800 hover:bg-green-700 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Tautan Cepat</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-green-300 transition duration-300">Beranda</a></li>
+                        <li><a href="#about" class="hover:text-green-300 transition duration-300">Tentang Kami</a></li>
+                        <li><a href="#menu" class="hover:text-green-300 transition duration-300">Menu</a></li>
+                        <li><a href="#gallery" class="hover:text-green-300 transition duration-300">Galeri</a></li>
+                        <li><a href="#contact" class="hover:text-green-300 transition duration-300">Reservasi</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Kontak</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-green-300"></i>
+                            <span>Jl. Prawirotaman No. 37, Yogyakarta</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-3 text-green-300"></i>
+                            <span>+62 812-3456-7890</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3 text-green-300"></i>
+                            <span>info@metreumkafe.com</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Newsletter</h3>
+                    <p class="mb-4">Dapatkan promo dan info terbaru dari Metreum Kafe.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Email Anda" class="px-4 py-2 w-full rounded-l-lg focus:outline-none text-gray-900">
+                        <button type="submit" class="bg-green-800 hover:bg-green-700 px-4 py-2 rounded-r-lg">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-green-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p>&copy; 2023 Metreum Kafe. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-green-300 transition duration-300">Privacy Policy</a>
+                    <a href="#" class="hover:text-green-300 transition duration-300">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </footer>
+    
+    <!-- Floating Action Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <div class="flex flex-col space-y-3">
+            <a href="#" class="bg-green-800 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-700 transition duration-300 transform hover:scale-110">
+                <i class="fab fa-whatsapp text-2xl"></i>
+            </a>
+            <a href="#home" class="bg-green-800 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-700 transition duration-300 transform hover:scale-110">
+                <i class="fas fa-arrow-up text-2xl"></i>
+            </a>
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+          AOS.init();
+
+
+
+
+
+
+
+
+
+
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Menu tab functionality
+        const menuTabs = document.querySelectorAll('.menu-tab');
+        const menuItems = document.querySelectorAll('.menu-item');
+        
+        menuTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs
+                menuTabs.forEach(t => t.classList.remove('active', 'bg-green-800', 'text-white'));
+                menuTabs.forEach(t => t.classList.add('bg-white', 'text-green-800'));
+                
+                // Add active class to clicked tab
+                tab.classList.add('active', 'bg-green-800', 'text-white');
+                tab.classList.remove('bg-white', 'text-green-800');
+                
+                const category = tab.getAttribute('data-category');
+                
+                // Show all items if 'all' is selected
+                if (category === 'all') {
+                    menuItems.forEach(item => {
+                        item.classList.remove('hidden');
+                    });
+                } else {
+                    // Hide all items
+                    menuItems.forEach(item => {
+                        item.classList.add('hidden');
+                    });
+                    
+                    // Show items with matching category
+                    const itemsToShow = document.querySelectorAll(`.menu-item.${category}`);
+                    itemsToShow.forEach(item => {
+                        item.classList.remove('hidden');
+                    });
+                }
+            });
+        });
+        
+        // Create floating leaves
+        function createLeaves() {
+            const container = document.getElementById('leaves-container');
+            
+            for (let i = 0; i < 20; i++) { // Kurangi daun jika perlu
+                const leaf = document.createElement('div');
+                leaf.classList.add('leaf-animation');
+
+                // Custom X drift
+                const drift = (Math.random() - 0.5) * 50; // Bisa negatif atau positif
+                leaf.style.setProperty('--drift-x', `${drift}vw`);
+                
+                // Posisi awal X
+                const startX = Math.random() * 100;
+                leaf.style.left = `${startX}vw`;
+                
+                // Durasi animasi acak
+                const duration = Math.random() * 10 + 5;
+                leaf.style.animationDuration = `${duration}s`;
+                
+                // Ukuran & opasitas
+                const size = Math.random() * 20 + 10;
+                leaf.style.width = `${size}px`;
+                leaf.style.height = `${size}px`;
+                leaf.style.opacity = Math.random() * 0.5 + 0.3;
+                
+                container.appendChild(leaf);
+            }
+        }
+
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-md');
+                nav.classList.remove('bg-opacity-90');
+                nav.classList.add('bg-opacity-100');
+            } else {
+                nav.classList.remove('shadow-md');
+                nav.classList.add('bg-opacity-90');
+                nav.classList.remove('bg-opacity-100');
+            }
+        });
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            createLeaves();
+        });
+    </script>
+</body>
+</html>
